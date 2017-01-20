@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name: SSM Pricing Tables
  * Plugin URI:  http://secretstache.com
- * Description: Enables a Pricing Table Custom Post Type.
+ * Description: A pricing table plugin that uses advanced custom fields.
  * Version:     0.1.0
  * Author:      Secret Stache Media
  * Author URI:  http://secretstache.com
@@ -23,9 +23,26 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * Define Constants
+ *
+ * @since   SSM Pricing Tables  0.1.0
+ */
+define( 'SSM_PRICING_TABLES_VERSION', '0.1.0' );
+define( 'PLUGIN_SLUG', 'ssm-pricing-tables' );
+define( 'SSM_PRICING_TABLES_URL', plugin_dir_url( __FILE__ ) );
+define( 'SSM_PRICING_TABLES_DIR', plugin_dir_path( __FILE__ ) );
+define( 'SSM_PRICING_TABLES_BASENAME', plugin_basename( __FILE__ ) );
+
+define( 'SSM_PRICING_TABLES_DIR_INC', trailingslashit ( SSM_PRICING_TABLES_DIR . 'inc' ) );
+define( 'SSM_PRICING_TABLES_DIR_LIB', trailingslashit ( SSM_PRICING_TABLES_DIR . 'lib' ) );
+// define( 'SSM_PRICING_TABLES_DIR_OPTIONS', trailingslashit ( SSM_PRICING_TABLES_DIR . 'options' ) );
+
 // Required files for registering the post type and taxonomies.
-require plugin_dir_path( __FILE__ ) . 'includes/class-post-type.php';
-require plugin_dir_path( __FILE__ ) . 'includes/class-post-type-registrations.php';
+require SSM_PRICING_TABLES_DIR_INC . 'dependency-check.php';
+require SSM_PRICING_TABLES_DIR_INC . 'class-post-type.php';
+require SSM_PRICING_TABLES_DIR_INC . 'class-post-type-registrations.php';
+require SSM_PRICING_TABLES_DIR_INC . 'acf.php';
 
 // Instantiate registration class, so we can add it as a dependency to main plugin class.
 $post_type_registrations = new SSM_Pricing_Tables_Registrations;
@@ -47,15 +64,16 @@ if ( is_admin() ) {
 
 	// Loads for users viewing the WordPress dashboard
 	if ( ! class_exists( 'Dashboard_Glancer' ) ) {
-		require plugin_dir_path( __FILE__ ) . 'includes/class-dashboard-glancer.php';  // WP 3.8
+		require SSM_PRICING_TABLES_DIR_INC . 'class-dashboard-glancer.php';  // WP 3.8
 	}
 
-	require plugin_dir_path( __FILE__ ) . 'includes/class-post-type-admin.php';
+	require SSM_PRICING_TABLES_DIR_INC . 'class-post-type-admin.php';
 
 	$post_type_admin = new SSM_Pricing_Tables_Admin( $post_type_registrations );
 	$post_type_admin->init();
 
 }
+
 
 // require plugin_dir_path( __FILE__ ) . 'includes/plugin_update_check.php';
 
