@@ -9,7 +9,7 @@
  * Plugin Name: SSM Pricing Tables
  * Plugin URI:  http://secretstache.com
  * Description: A pricing table plugin that uses advanced custom fields.
- * Version:     0.1.2
+ * Version:     0.1.3
  * Author:      Secret Stache Media
  * Author URI:  http://secretstache.com
  * Text Domain: ssm-pricing-tables
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @since   SSM Pricing Tables  0.1.0
  */
-define( 'SSM_PRICING_TABLES_VERSION', '0.1.2' );
+define( 'SSM_PRICING_TABLES_VERSION', '0.1.3' );
 define( 'PLUGIN_SLUG', 'ssm-pricing-tables' );
 define( 'SSM_PRICING_TABLES_URL', plugin_dir_url( __FILE__ ) );
 define( 'SSM_PRICING_TABLES_DIR', plugin_dir_path( __FILE__ ) );
