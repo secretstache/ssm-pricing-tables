@@ -11,7 +11,7 @@
  *
  * @since 0.1.0
  */
-class SSM_Pricing_Tables {
+class SSM_Pricing_Table {
 
 	protected $registration_handler;
 

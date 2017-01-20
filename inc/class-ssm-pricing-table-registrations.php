@@ -11,7 +11,7 @@
  *
  * @package SSM_Pricing_Tables
  */
-class SSM_Pricing_Tables_Registrations {
+class SSM_Pricing_Table_Registrations {
 
 	public $post_type = 'pricing-table';
 

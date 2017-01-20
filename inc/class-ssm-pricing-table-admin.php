@@ -11,7 +11,7 @@
  *
  * @package SSM_Pricing_Tables
  */
-class SSM_Pricing_Tables_Admin {
+class SSM_Pricing_Table_Admin {
 
 	protected $registration_handler;
 
@@ -27,6 +27,9 @@ class SSM_Pricing_Tables_Admin {
 		// Show post counts in the dashboard
 		add_action( 'right_now_content_table_end', array( $this, 'add_rightnow_counts' ) );
 		add_action( 'dashboard_glance_items', array( $this, 'add_glance_counts' ) );
+
+		// Add Shortcode Metabox to Story editor screen
+		add_action( 'add_meta_boxes_pricing-table', array( $this, 'ssm_pricing_table_shortcode_metabox' ) );
 
 	}
 
@@ -120,5 +123,36 @@ class SSM_Pricing_Tables_Admin {
 		$glancer = new Dashboard_Glancer;
 		$glancer->add( $this->registration_handler->post_type, array( 'publish', 'pending' ) );
 	}
+
+	/**
+	 * Register the Metabox
+	 *
+	 * @since 0.1.1
+	 */
+	public function ssm_pricing_table_shortcode_metabox() {
+
+	  if ( get_post_status() == 'publish' ) { 
+
+	  add_meta_box( 'ssm-pricing-table-shortcode', 'Shortcode', array( $this, 'ssm_pricing_table_shortcode_output' ), '', 'normal', 'high' );
+
+		}
+
+	}
+	
+	/**
+	 * Metabox Output
+	 *
+	 * @since 0.1.1
+	 */
+	public function ssm_pricing_table_shortcode_output( $post ) {
+
+		global $post;
+	  $id = $post->ID;
+	  
+	  echo '<p class="description">Copy this shortcode and paste it into the editor</p>';
+	  echo '<code>[pricing_table id="' . $id . '"]</code>';
+	  
+	}
+
 
 }

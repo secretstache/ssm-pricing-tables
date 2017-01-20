@@ -9,7 +9,7 @@
  * Plugin Name: SSM Pricing Tables
  * Plugin URI:  http://secretstache.com
  * Description: A pricing table plugin that uses advanced custom fields.
- * Version:     0.1.1
+ * Version:     0.1.2
  * Author:      Secret Stache Media
  * Author URI:  http://secretstache.com
  * Text Domain: ssm-pricing-tables
@@ -33,22 +33,21 @@ define( 'PLUGIN_SLUG', 'ssm-pricing-tables' );
 define( 'SSM_PRICING_TABLES_URL', plugin_dir_url( __FILE__ ) );
 define( 'SSM_PRICING_TABLES_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SSM_PRICING_TABLES_BASENAME', plugin_basename( __FILE__ ) );
-
 define( 'SSM_PRICING_TABLES_DIR_INC', trailingslashit ( SSM_PRICING_TABLES_DIR . 'inc' ) );
 define( 'SSM_PRICING_TABLES_DIR_LIB', trailingslashit ( SSM_PRICING_TABLES_DIR . 'lib' ) );
-// define( 'SSM_PRICING_TABLES_DIR_OPTIONS', trailingslashit ( SSM_PRICING_TABLES_DIR . 'options' ) );
 
 // Required files for registering the post type and taxonomies.
 require SSM_PRICING_TABLES_DIR_INC . 'dependency-check.php';
-require SSM_PRICING_TABLES_DIR_INC . 'class-post-type.php';
-require SSM_PRICING_TABLES_DIR_INC . 'class-post-type-registrations.php';
+require SSM_PRICING_TABLES_DIR_INC . 'class-ssm-pricing-table.php';
+require SSM_PRICING_TABLES_DIR_INC . 'class-ssm-pricing-table-registrations.php';
 require SSM_PRICING_TABLES_DIR_INC . 'acf.php';
+require SSM_PRICING_TABLES_DIR_INC . 'shortcodes.php';
 
 // Instantiate registration class, so we can add it as a dependency to main plugin class.
-$post_type_registrations = new SSM_Pricing_Tables_Registrations;
+$post_type_registrations = new SSM_Pricing_Table_Registrations;
 
 // Instantiate main plugin file, so activation callback does not need to be static.
-$post_type = new SSM_Pricing_Tables( $post_type_registrations );
+$post_type = new SSM_Pricing_Table( $post_type_registrations );
 
 // Register callback that is fired when the plugin is activated.
 register_activation_hook( __FILE__, array( $post_type, 'activate' ) );
@@ -67,15 +66,14 @@ if ( is_admin() ) {
 		require SSM_PRICING_TABLES_DIR_INC . 'class-dashboard-glancer.php';  // WP 3.8
 	}
 
-	require SSM_PRICING_TABLES_DIR_INC . 'class-post-type-admin.php';
+	require SSM_PRICING_TABLES_DIR_INC . 'class-ssm-pricing-table-admin.php';
 
-	$post_type_admin = new SSM_Pricing_Tables_Admin( $post_type_registrations );
+	$post_type_admin = new SSM_Pricing_Table_Admin( $post_type_registrations );
 	$post_type_admin->init();
 
 }
 
-
-require SSM_PRICING_TABLES_DIR_INC . '/plugin_update_check.php';
+require SSM_PRICING_TABLES_DIR_INC . '/plugin-update-check.php';
 
 $MyUpdateChecker = new PluginUpdateChecker_2_0 (
     'https://kernl.us/api/v1/updates/5881908e9c386122fd738262/',
