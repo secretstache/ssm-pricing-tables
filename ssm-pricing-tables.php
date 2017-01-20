@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @since   SSM Pricing Tables  0.1.0
  */
-define( 'SSM_PRICING_TABLES_VERSION', '0.1.1' );
+define( 'SSM_PRICING_TABLES_VERSION', '0.1.2' );
 define( 'PLUGIN_SLUG', 'ssm-pricing-tables' );
 define( 'SSM_PRICING_TABLES_URL', plugin_dir_url( __FILE__ ) );
 define( 'SSM_PRICING_TABLES_DIR', plugin_dir_path( __FILE__ ) );
