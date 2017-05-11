@@ -3,17 +3,6 @@
     "title": "Pricing Table Information",
     "fields": [
         {
-            "layout": "horizontal",
-            "choices": {
-                "Monthly": "Monthly",
-                "Quarterly": "Quarterly",
-                "Yearly": "Yearly"
-            },
-            "default_value": [],
-            "allow_custom": 0,
-            "save_custom": 0,
-            "toggle": 0,
-            "return_format": "value",
             "key": "field_5879ab9099a0e",
             "label": "Payment Options",
             "name": "payment_options",
@@ -25,19 +14,20 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "layout": "horizontal",
+            "choices": {
+                "Monthly": "Monthly",
+                "Quarterly": "Quarterly",
+                "Yearly": "Yearly"
+            },
+            "default_value": [],
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
         },
         {
-            "layout": "vertical",
-            "choices": {
-                "list": "Each plan will choose from the same list of features",
-                "curated": "Each plan has it's own specific list of features"
-            },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "allow_null": 0,
-            "return_format": "value",
             "key": "field_5881220134fc0",
             "label": "Features",
             "name": "features",
@@ -49,35 +39,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "layout": "vertical",
+            "choices": {
+                "list": "Each plan will choose from the same list of features",
+                "curated": "Each plan has it's own specific list of features"
+            },
+            "default_value": "",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
         },
         {
-            "sub_fields": [
-                {
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "key": "field_5879a7a9a42ca",
-                    "label": "Feature",
-                    "name": "feature",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    }
-                }
-            ],
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Feature",
-            "collapsed": "field_5879a7a9a42ca",
             "key": "field_5879a77ea42c9",
             "label": "Standard Feature List",
             "name": "standard_feature_list",
@@ -97,16 +71,54 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Feature",
+            "collapsed": "field_5879a7a9a42ca",
             "sub_fields": [
                 {
+                    "key": "field_5879a7a9a42ca",
+                    "label": "Feature",
+                    "name": "feature",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5879a7cfa42cb",
+            "label": "Plans",
+            "name": "plans",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Plan",
+            "collapsed": "field_5879a7fba42cc",
+            "sub_fields": [
+                {
                     "key": "field_5879a7fba42cc",
                     "label": "Title",
                     "name": "plan_title",
@@ -118,14 +130,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_5879a802a42cd",
                     "label": "Description",
                     "name": "plan_description",
@@ -137,14 +149,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
-                    "prepend": "$",
-                    "append": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_5879a80ca42ce",
                     "label": "Monthly Price",
                     "name": "monthly_price",
@@ -164,14 +176,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_5881238c34fc3",
                     "label": "Monthly Sale Price",
                     "name": "monthly_sale_price",
@@ -191,14 +203,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_5879b539e4664",
                     "label": "Quarterly Price",
                     "name": "quarterly_price",
@@ -218,14 +230,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_588123a834fc4",
                     "label": "Quarterly Sale Price",
                     "name": "quarterly_sale_price",
@@ -245,14 +257,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_5879a83ba42cf",
                     "label": "Yearly Price",
                     "name": "yearly_price",
@@ -272,14 +284,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": "",
+                    "append": ""
+                },
+                {
                     "key": "field_588123bd34fc5",
                     "label": "Yearly Sale Price",
                     "name": "yearly_sale_price",
@@ -299,16 +311,14 @@
                         "width": "50",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "$",
+                    "append": ""
                 },
                 {
-                    "layout": "vertical",
-                    "choices": [],
-                    "default_value": [],
-                    "allow_custom": 0,
-                    "save_custom": 0,
-                    "toggle": 1,
-                    "return_format": "value",
                     "key": "field_5879a8c8a42d1",
                     "label": "Available Features",
                     "name": "standard_features",
@@ -328,35 +338,16 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "layout": "vertical",
+                    "choices": [],
+                    "default_value": [],
+                    "allow_custom": 0,
+                    "save_custom": 0,
+                    "toggle": 1,
+                    "return_format": "value"
                 },
                 {
-                    "sub_fields": [
-                        {
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_5881233634fc2",
-                            "label": "Feature",
-                            "name": "feature",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            }
-                        }
-                    ],
-                    "min": 0,
-                    "max": 0,
-                    "layout": "block",
-                    "button_label": "Add Feature",
-                    "collapsed": "field_5881233634fc2",
                     "key": "field_5881232534fc1",
                     "label": "Feature List",
                     "name": "feature_list",
@@ -376,64 +367,207 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Feature",
+                    "collapsed": "field_5881233634fc2",
+                    "sub_fields": [
+                        {
+                            "key": "field_5881233634fc2",
+                            "label": "Feature",
+                            "name": "feature",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
                 },
                 {
+                    "key": "field_59149690591e4",
+                    "label": "Button Options",
+                    "name": "button_options",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Single Button": "Single Button",
+                        "Dropdown": "Dropdown"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "Single Button",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_591498f903374",
+                    "label": "Parent Item Text",
+                    "name": "parent_item_text",
+                    "type": "text",
+                    "instructions": "This is the top level button that will reveal the dropdown list.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59149690591e4",
+                                "operator": "==",
+                                "value": "Dropdown"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5914971c591e6",
+                    "label": "Buttons",
+                    "name": "buttons",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59149690591e4",
+                                "operator": "==",
+                                "value": "Dropdown"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 3,
+                    "layout": "block",
+                    "button_label": "Add Button",
+                    "sub_fields": [
+                        {
+                            "key": "field_59149755591e7",
+                            "label": "Button Text",
+                            "name": "text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_59149760591e8",
+                            "label": "Button URL",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
                     "key": "field_5879a934a42d3",
                     "label": "Button Text",
                     "name": "button_text",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59149690591e4",
+                                "operator": "==",
+                                "value": "Single Button"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
-                },
-                {
+                    },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5879a93ba42d4",
                     "label": "Button URL",
                     "name": "button_url",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59149690591e4",
+                                "operator": "==",
+                                "value": "Single Button"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
-            ],
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Plan",
-            "collapsed": "field_5879a7fba42cc",
-            "key": "field_5879a7cfa42cb",
-            "label": "Plans",
-            "name": "plans",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
+            ]
         }
     ],
     "location": [
@@ -453,5 +587,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484882182
+    "modified": 1494521576
 }
