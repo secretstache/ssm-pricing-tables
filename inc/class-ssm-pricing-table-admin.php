@@ -29,7 +29,7 @@ class SSM_Pricing_Table_Admin {
 		add_action( 'dashboard_glance_items', array( $this, 'add_glance_counts' ) );
 
 		// Add Shortcode Metabox to Story editor screen
-		add_action( 'add_meta_boxes_pricing-table', array( $this, 'ssm_pricing_table_shortcode_metabox' ) );
+		// add_action( 'add_meta_boxes_pricing-table', array( $this, 'ssm_pricing_table_shortcode_metabox' ) );
 
 	}
 
