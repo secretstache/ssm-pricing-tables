@@ -15,15 +15,15 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "horizontal",
             "choices": {
                 "monthly": "Monthly",
                 "quarterly": "Quarterly",
                 "yearly": "Yearly"
             },
-            "default_value": [],
             "allow_custom": 0,
             "save_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
             "toggle": 0,
             "return_format": "value"
         },
@@ -40,15 +40,15 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "vertical",
             "choices": {
                 "list": "Each plan will choose from the same list of features",
                 "curated": "Each plan has it's own specific list of features"
             },
-            "default_value": "",
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "allow_null": 0,
+            "default_value": "",
+            "layout": "vertical",
             "return_format": "value"
         },
         {
@@ -168,7 +168,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Monthly"
+                                "value": "monthly"
                             }
                         ]
                     ],
@@ -178,10 +178,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5881238c34fc3",
@@ -195,7 +195,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Monthly"
+                                "value": "monthly"
                             }
                         ]
                     ],
@@ -205,10 +205,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5879b539e4664",
@@ -222,7 +222,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Quarterly"
+                                "value": "quarterly"
                             }
                         ]
                     ],
@@ -232,10 +232,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_588123a834fc4",
@@ -249,7 +249,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Quarterly"
+                                "value": "quarterly"
                             }
                         ]
                     ],
@@ -259,10 +259,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5879a83ba42cf",
@@ -276,7 +276,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Yearly"
+                                "value": "yearly"
                             }
                         ]
                     ],
@@ -286,10 +286,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_588123bd34fc5",
@@ -303,7 +303,7 @@
                             {
                                 "field": "field_5879ab9099a0e",
                                 "operator": "==",
-                                "value": "Yearly"
+                                "value": "yearly"
                             }
                         ]
                     ],
@@ -313,10 +313,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "$",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5879a8c8a42d1",
@@ -587,5 +587,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1494521576
+    "modified": 1495149718
 }
