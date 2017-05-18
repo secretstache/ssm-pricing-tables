@@ -17,9 +17,9 @@
             },
             "layout": "horizontal",
             "choices": {
-                "Monthly": "Monthly",
-                "Quarterly": "Quarterly",
-                "Yearly": "Yearly"
+                "monthly": "Monthly",
+                "quarterly": "Quarterly",
+                "yearly": "Yearly"
             },
             "default_value": [],
             "allow_custom": 0,
