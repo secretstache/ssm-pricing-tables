@@ -3,5 +3,6 @@
   "0.1.1" : "Add support for kernl CI",
   "0.1.2" : "Version Bump",
   "0.1.3" : "Refactors code and builds pricing table shortcode",
-  "0.1.4" : "Adds support for button dropdown on plans. This feature will break stuff. Temporarily removes shortcode metabox."
+  "0.1.4" : "Adds support for button dropdown on plans. This feature will break stuff. Temporarily removes shortcode metabox.",
+  "0.1.5" : "Temporarily removes price requirement"
 }
