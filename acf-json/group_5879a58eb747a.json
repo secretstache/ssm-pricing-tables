@@ -157,6 +157,25 @@
                     "append": ""
                 },
                 {
+                    "key": "field_59cd15da32094",
+                    "label": "Call to Action",
+                    "name": "call_to_action",
+                    "type": "text",
+                    "instructions": "Optional. This banner is best used on a single table.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5879a80ca42ce",
                     "label": "Monthly Price",
                     "name": "monthly_price",
@@ -587,5 +606,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495149718
+    "modified": 1506613037
 }

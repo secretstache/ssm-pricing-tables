@@ -1,5 +1,17 @@
 <?php 
 
+// add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ 
+// function my_acf_json_save_point( $path ) {
+    
+//     // update path
+//     $path = SSM_PRICING_TABLES_DIR . 'acf-json';
+    
+//     // return
+//     return $path;
+    
+// }
+
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 /**
  * Add our acf-json to the activated theme
